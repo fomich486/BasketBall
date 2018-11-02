@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\CharacterScripts\trajectoryPrediction.cs" />
      <Compile Include="Assets\Scripts\Spawners\FieldSpawner.cs" />
      <Compile Include="Assets\Scripts\UI\Score.cs" />
+     <Compile Include="Assets\Scripts\UI\ScreneFaider.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

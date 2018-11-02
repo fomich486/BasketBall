@@ -637,6 +637,7 @@ GameObject:
   - component: {fileID: 1424091538}
   - component: {fileID: 1424091537}
   - component: {fileID: 1424091541}
+  - component: {fileID: 1424091542}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -749,6 +750,22 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1424091542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1424091536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6c1a9c41f0d6b4b81888ab302ce150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numWidth: 20
+  _numHeight: 20
+  _tileImage: {fileID: 114215177261501352, guid: adbfe44469ddbab47a05fc5e92167289,
+    type: 2}
+  _faidCanvas: {fileID: 1424091540}
 --- !u!1 &1511212691
 GameObject:
   m_ObjectHideFlags: 0
