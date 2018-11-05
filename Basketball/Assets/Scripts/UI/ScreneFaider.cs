@@ -30,7 +30,9 @@ public class ScreneFaider : MonoBehaviour {
 		//Right - Left
 		//StartCoroutine (FadeRightLeftPrimitiv());
 		//Up - Down
-		StartCoroutine (FadeUpDownPrimitiv());
+		//StartCoroutine (FadeUpDownPrimitiv());
+		//Diagonal leftUp- rightDown
+		StartCoroutine (FadeUpLeftToDownRight());
 
 	}
 
@@ -129,11 +131,68 @@ public class ScreneFaider : MonoBehaviour {
 		DestroyList ();
 	}
 
+	//add Down - Up
+	#endregion
+
+	#region Diagonal
+	IEnumerator FadeUpLeftToDownRight()
+	{
+		RandomColor ();
+		int n = (_numWidth + _numHeight) - 1;
+		int k = 1;
+		int step = _numHeight - 1;
+		int coef = 0;
+		int diffNxM = Mathf.Abs (_numWidth - _numHeight);
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < k; j++) {
+				print (string.Format ("(i + coef) + j*step = {0}",(i + coef) + j*step));
+				RectTransform tile = tilesList[(i + coef) + j*step].GetComponent<RectTransform> ();
+
+				tile.sizeDelta = Vector2.zero;
+			}
+			//square
+			if (_numWidth == _numHeight) {
+				if (i < step) {
+					k++;
+			
+				} else if (i >= step) {
+					k--;
+					coef += step;
+				}
+			}
+			//not square
+			else if (_numWidth < _numHeight) {
+				if (i < step) {
+					if(i<_numWidth - 1)
+						k++;
+
+				} else if (i >= step) {
+					k--;
+					coef += step;
+				}
+			}
+
+			else if (_numWidth > _numHeight) {
+				if (i < step) {
+					k++;
+
+				} else if (i >= step) {
+					if (i >= step + diffNxM) {
+						k--;
+					}
+					coef += step;
+				}
+			}
+
+			yield return new WaitForSeconds(0.05f);
+		}
+	}
+
 	#endregion
 	void RandomColor()
 	{
 		foreach (RectTransform tile in tilesList) {
-			Color col = new Color (1f,Random.Range (0f, 1f),0f );
+			Color col = new Color (1f,0f,Random.Range (0f, 1f) );
 			tile.GetComponent<Image> ().color = col;
 		}
 	}

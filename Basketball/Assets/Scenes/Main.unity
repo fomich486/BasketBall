@@ -761,8 +761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6c1a9c41f0d6b4b81888ab302ce150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numWidth: 10
-  _numHeight: 24
+  _numWidth: 20
+  _numHeight: 37
   _tileImage: {fileID: 114215177261501352, guid: adbfe44469ddbab47a05fc5e92167289,
     type: 2}
   _faidCanvas: {fileID: 1424091540}
