@@ -14,10 +14,12 @@ public class Score : MonoBehaviour {
 		int score = int.Parse(_scoreTxt.text);
 		score++;
 		_scoreTxt.text = score.ToString ();
-		if (score % 5 == 0) {
+		if (score % 2 == 0) {
 			if (spawnField != null) {
 				spawnField.Invoke ();
 			}
+			print ("Must be invoked");
+			FindObjectOfType<Faider> ().FadeIn ();
 		}	
 	}
 }

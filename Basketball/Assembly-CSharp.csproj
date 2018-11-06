@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\CharacterScripts\Throw.cs" />
      <Compile Include="Assets\Scripts\CharacterScripts\trajectoryPrediction.cs" />
      <Compile Include="Assets\Scripts\Spawners\FieldSpawner.cs" />
+     <Compile Include="Assets\Scripts\UI\BackgroundImage.cs" />
+     <Compile Include="Assets\Scripts\UI\Faider.cs" />
      <Compile Include="Assets\Scripts\UI\Score.cs" />
      <Compile Include="Assets\Scripts\UI\ScreneFaider.cs" />
  <Reference Include="UnityEngine.UI">
