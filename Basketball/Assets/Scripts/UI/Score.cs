@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class Score : MonoBehaviour {
 	[SerializeField]
 	public  Text _scoreTxt;
-	public UnityEvent spawnField;
 
 	public void SetScore()
 	{
@@ -15,9 +14,6 @@ public class Score : MonoBehaviour {
 		score++;
 		_scoreTxt.text = score.ToString ();
 		if (score % 2 == 0) {
-			if (spawnField != null) {
-				spawnField.Invoke ();
-			}
 			print ("Must be invoked");
 			FindObjectOfType<Faider> ().FadeIn ();
 		}	

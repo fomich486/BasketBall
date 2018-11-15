@@ -15,22 +15,23 @@ public class AfterShot : MonoBehaviour {
 	[Space]
 	[Header("CharecterSprites")]
 	[SerializeField]
-	Sprite jumping;
+	public Sprite jumping;
 	[SerializeField]
-	Sprite readyToShoot;
+    public Sprite readyToShoot;
 	[SerializeField]
-	Sprite Shooted;
+    public Sprite Shooted;
 
 	void Start()
 	{
 		_sr = GetComponent<SpriteRenderer> ();
 		_throw = GetComponent<Throw> ();
 	}
- 
-	public void ShotCompleated()
-	{
-		StartCoroutine (MoveToNextPos ());
-	}
+
+    public void EnableShoot()
+    {
+        _throw.enabled = true;
+    }
+	
 	IEnumerator MoveToNextPos()
 	{
 		_sr.sprite = jumping;

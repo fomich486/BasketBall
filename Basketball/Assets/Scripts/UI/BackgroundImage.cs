@@ -15,7 +15,7 @@ public class BackgroundImage : MonoBehaviour {
 	}
 	public void SetNewBackground()
 	{
-		backgroundImage.sprite = sprites [num];
+		//backgroundImage.sprite = sprites [num];
 		num++;
 	}
 }

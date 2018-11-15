@@ -10,24 +10,11 @@ public class FieldSpawner : MonoBehaviour {
 	public float YdistanceBetweenField;
 	public int basketsToThrow;
 	private Vector3 nextPoint = Vector3.zero;
+    int i = 0;
 
-
-	void Awake()
-	{
-		spawnGameFields ();
-	}
 
 	public void spawnGameFields (){
-		for (int i = 0; i < basketsToThrow; i++) {
-			Quaternion q = new Quaternion();
-			if (i % 2 == 0)
-				q = Quaternion.identity;
-			else
-				q.Set (0, 180, 0, 0);
-			Vector3 spawnPos = nextPoint;
-			nextPoint = spawnPos + Vector3.up *  YdistanceBetweenField;
-			Instantiate (_gameField.gameObject, spawnPos, q);
-		}
-	}
+
+    }
 
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class trajectoryPrediction : MonoBehaviour {
-	const int numberOfPoints = 20;
+	const int numberOfPoints = 60;
 	[SerializeField]
 	GameObject aimTile;
 	[SerializeField]

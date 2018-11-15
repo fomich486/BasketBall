@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Throw : MonoBehaviour {
 	[SerializeField]
-	private Transform _ball;
+	public Transform _ball;
 	[SerializeField]
 	private Transform _spawnPos;
 	[Range(1f,1000f)]
@@ -25,7 +25,7 @@ public class Throw : MonoBehaviour {
 		//Mouse controll
 		Vector3 mp = Input.mousePosition;
 		Vector3 worldPoint = Camera.main.ScreenToWorldPoint(mp);
-		worldPoint = new Vector3 (worldPoint.x, worldPoint.y+2f, 0);
+		worldPoint = new Vector3 (0f, worldPoint.y, 0);
 		Vector3 direction = worldPoint - _spawnPos.position;
 		float charger = 0.75f + 0.25f * Mathf.Sin (delta);
 		Vector3 p = direction.normalized * force * charger;

@@ -22,8 +22,8 @@ public class Ball : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D coll)
 	{
 		if (coll.tag == "Score") {
-			//Congrant particle system
-			Destroy (coll.gameObject);
+            //Congrant particle system
+            coll.gameObject.SetActive(false);
 			failDestroy = false;
 			Die (false);
 		}

@@ -90,7 +90,8 @@ public class Faider : MonoBehaviour {
 	void CoroutineUtility(bool apeare)
 	{
 		if (apeare) {
-			FindObjectOfType<BackgroundImage> ().SetNewBackground ();
+            //FindObjectOfType<BackgroundImage> ().SetNewBackground ();
+            FindObjectOfType<ChangeLevel>().SetNewLevel();
 			FadeOut ();
 		} else
 			DestroyList ();
