@@ -742,6 +742,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4832514313691974, guid: 83d2b5b0ff299d04897dcfb2d3b74284, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -809,6 +814,54 @@ Prefab:
       propertyPath: ringHolder
       value: 
       objectReference: {fileID: 29616711}
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.data[1].PlayerRadyToShoot
+      value: 
+      objectReference: {fileID: 21300000, guid: 3ea91742127533a4b83ffa48ba4fd6d7,
+        type: 3}
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.data[1].PlayerWaiting
+      value: 
+      objectReference: {fileID: 21300000, guid: 18b43bc8f50901b4a8fee011b2d59cce,
+        type: 3}
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.data[1].Jumping
+      value: 
+      objectReference: {fileID: 21300000, guid: cf69a2d319f8a8c4795ca277ba127740,
+        type: 3}
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.data[1].Ball
+      value: 
+      objectReference: {fileID: 21300000, guid: b84253eca95d6bd4589471e1376d3e44,
+        type: 3}
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.data[1].Background
+      value: 
+      objectReference: {fileID: 21300000, guid: b53c58bf945978d48a6990e48e5cd3f0,
+        type: 3}
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.data[1].Basket
+      value: 
+      objectReference: {fileID: 21300000, guid: 8240517c431d36c4ea6e30f9bf04ac17,
+        type: 3}
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.data[1].Ring
+      value: 
+      objectReference: {fileID: 21300000, guid: e44167fdeca72a246a2fcb720fdc420e,
+        type: 3}
+    - target: {fileID: 114205771686744250, guid: 83d2b5b0ff299d04897dcfb2d3b74284,
+        type: 2}
+      propertyPath: levelList.Array.data[1].Basketholder
+      value: 
+      objectReference: {fileID: 21300000, guid: 8240517c431d36c4ea6e30f9bf04ac17,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83d2b5b0ff299d04897dcfb2d3b74284, type: 2}
   m_IsPrefabParent: 0
