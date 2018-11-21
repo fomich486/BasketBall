@@ -305,6 +305,11 @@
     <Compile Include="Assets\MainProject\BasicScene\Scripts\Sounds\VolumeControl.cs" />
     <Compile Include="Assets\MainProject\BasicScene\Scripts\StartNewScene.cs" />
     <Compile Include="Assets\MainProject\MainMenu\Scripts\Controller.cs" />
+    <Compile Include="Assets\MainProject\TriangleGameplay\Scripts\DragNDrop.cs" />
+    <Compile Include="Assets\MainProject\TriangleGameplay\Scripts\GridCheck.cs" />
+    <Compile Include="Assets\MainProject\TriangleGameplay\Scripts\GridElement.cs" />
+    <Compile Include="Assets\MainProject\TriangleGameplay\Scripts\GridPlacement.cs" />
+    <Compile Include="Assets\MainProject\TriangleGameplay\Scripts\PiramidSpawner.cs" />
     <Compile Include="Assets\Scripts\Ball\Ball.cs" />
     <Compile Include="Assets\Scripts\BasketMovement.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
