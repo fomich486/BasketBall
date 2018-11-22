@@ -299,6 +299,7 @@
   <ItemGroup>
     <Compile Include="Assets\MainProject\BasicScene\Scripts\FaiderBasic.cs" />
     <Compile Include="Assets\MainProject\BasicScene\Scripts\Pause.cs" />
+    <Compile Include="Assets\MainProject\BasicScene\Scripts\RandomColor.cs" />
     <Compile Include="Assets\MainProject\BasicScene\Scripts\RotateSpiral.cs" />
     <Compile Include="Assets\MainProject\BasicScene\Scripts\Sounds\StartVolumeSettings.cs" />
     <Compile Include="Assets\MainProject\BasicScene\Scripts\Sounds\VFXManager.cs" />

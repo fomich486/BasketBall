@@ -59,12 +59,13 @@ public class PiramidSpawner : MonoBehaviour {
         while (trngls.Count != 0)
         {
             float randCollor = Random.Range(0f, 1f);
-            Color color = new Color(randCollor, randCollor, randCollor);
+            Color color = RandomColor.GetRandomColor();
             int listCount = trngls.Count;
             int rand = Random.Range(0, listCount);
             Vector2 size = 2f * Vector2.one;
             Collider2D[] colls = Physics2D.OverlapBoxAll(trngls[rand].transform.position, size, 0f, layer);
             GameObject collection = new GameObject();
+           
             collection.transform.position = trngls[rand].transform.position;
             collection.name = "Collection";
             foreach (Collider2D c in colls)
@@ -75,5 +76,6 @@ public class PiramidSpawner : MonoBehaviour {
             }
         }
     }
+
 
 }

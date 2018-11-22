@@ -113,22 +113,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &517824616 stripped
+--- !u!1 &294775162
 GameObject:
-  m_PrefabParentObject: {fileID: 1673886976828050, guid: 16368dd2785859e4e809701529c9d95e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1920428323}
---- !u!114 &517824620
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 294775164}
+  - component: {fileID: 294775163}
+  m_Layer: 0
+  m_Name: DragController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &294775163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517824616}
+  m_GameObject: {fileID: 294775162}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cc75b369d5d1ee48a121cd004cc089d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerTriangel:
+    serializedVersion: 2
+    m_Bits: 512
+  layerGrid:
+    serializedVersion: 2
+    m_Bits: 1
+--- !u!4 &294775164
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294775162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0152013, y: 0.49600762, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1409863215
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +200,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.34214672, g: 0.53676474, b: 0.28022277, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -283,8 +313,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1813495819}
-  - component: {fileID: 1813495818}
   - component: {fileID: 1813495820}
+  - component: {fileID: 1813495818}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -298,14 +328,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1813495817}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 296b193f414aa424691eb4b3d56322e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPrimitiv: {fileID: 4955489159455648, guid: 16368dd2785859e4e809701529c9d95e,
     type: 2}
-  sideLength: 11
+  sideLength: 5
   trngls: []
   layer:
     serializedVersion: 2
@@ -336,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPrimitiv: {fileID: 4955489159455648, guid: ed938e01fd5120a45a534fe40301a075,
     type: 2}
-  sideLength: 11
+  sideLength: 5
   trngls: []
   layer:
     serializedVersion: 2
@@ -379,6 +409,21 @@ Prefab:
     - target: {fileID: 4955489159455648, guid: 16368dd2785859e4e809701529c9d95e, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212677965979666152, guid: 16368dd2785859e4e809701529c9d95e,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212677965979666152, guid: 16368dd2785859e4e809701529c9d95e,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212677965979666152, guid: 16368dd2785859e4e809701529c9d95e,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16368dd2785859e4e809701529c9d95e, type: 2}
