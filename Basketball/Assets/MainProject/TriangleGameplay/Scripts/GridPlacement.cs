@@ -6,6 +6,7 @@ public class GridPlacement :PiramidSpawner {
 
     private void Start()
     {
+        spawnPrimitiv.localScale = new Vector3(size, size);
         SpawnPiramid();
     }
     public Vector3 CheckPlacement(Vector2 point,float rotZ)

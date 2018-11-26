@@ -5,6 +5,4 @@ using UnityEngine;
 public class GridElement : MonoBehaviour {
 
     public bool filled = false;
-
-
 }

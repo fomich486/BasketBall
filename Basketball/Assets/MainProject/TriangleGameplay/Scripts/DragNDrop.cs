@@ -15,15 +15,19 @@ public class DragNDrop : MonoBehaviour {
         
     }
     void Update () {
+        //mouse controls
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButton(0) && !hold && InBounds())
         {
             //print("Inside, it's true");
+            SetOrderInLayer(2);
             hold = true;
-            GridUncheck();
+            if(AllElementFilled())
+                GridUncheck();
         }
         if (Input.GetMouseButtonUp(0)&&hold)
         {
+            SetOrderInLayer(1);
             hold = false;
             //return to last position if failed
             SpawnCheck();
@@ -36,12 +40,43 @@ public class DragNDrop : MonoBehaviour {
             // print(gameObject.GetComponentInChildren<Transform>().name);
             
         }
+        //Touch controll
+      /*  if (Input.touchCount > 0)
+        {
+            Touch t = Input.GetTouch(0);
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(t.position);
+            if (t.phase == TouchPhase.Began && !hold && InBounds())
+            {
+                //print("Inside, it's true");
+                SetOrderInLayer(2);
+                hold = true;
+                if (AllElementFilled())
+                    GridUncheck();
+            }
+            if (t.phase == TouchPhase.Ended && hold)
+            {
+                SetOrderInLayer(1);
+                hold = false;
+                //return to last position if failed
+                SpawnCheck();
+
+            }
+
+            if (hold)
+            {
+                holdObject.transform.position = mousePos;
+                // print(gameObject.GetComponentInChildren<Transform>().name);
+
+            }
+        }*/
+
 	}
 
     bool InBounds()
     {
         // print(GetComponent<Collider2D>().OverlapPoint(mouseP));
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+       // Ray r = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
         Debug.DrawRay(r.origin, r.direction*20f, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(r.origin, r.direction, Mathf.Infinity,layerTriangel);
         if (hit)
@@ -85,8 +120,12 @@ public class DragNDrop : MonoBehaviour {
             }
             else
             {
-                BackToLastPos();
-                GridUncheck();
+                print("nothig hited");
+                if (NoGrid())
+                {
+                    BackToLastPos();
+                    GridUncheck();
+                }
                 return;
             }
         }
@@ -112,6 +151,40 @@ public class DragNDrop : MonoBehaviour {
 
         }
     }
-    void Check
- 
+
+   bool NoGrid()
+    {
+        for (int i = 0; i < holdObject.transform.childCount; i++)
+        {
+            var child = holdObject.transform.GetChild(i);
+            RaycastHit2D hit = Physics2D.Raycast(child.position, Vector3.forward, Mathf.Infinity, layerGrid);
+            if (hit)
+                return true;
+        }
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+        holdObject.transform.position = mousePos;
+        return false;
+    }
+
+    bool AllElementFilled()
+    {
+        for (int i = 0; i < holdObject.transform.childCount; i++)
+        {
+            var child = holdObject.transform.GetChild(i);
+            RaycastHit2D hit = Physics2D.Raycast(child.position, Vector3.forward, Mathf.Infinity, layerGrid);
+            if(hit)
+                if  (hit.collider.gameObject.GetComponent<GridElement>().filled == false)
+                    return false;
+        }
+        return true;
+    }
+    void SetOrderInLayer(int order)
+    {
+        for (int i = 0; i < holdObject.transform.childCount; i++)
+        {
+            var child = holdObject.transform.GetChild(i);
+            child.GetComponent<SpriteRenderer>().sortingOrder = order;
+        }
+    }
 }
