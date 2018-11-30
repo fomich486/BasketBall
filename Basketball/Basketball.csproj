@@ -307,6 +307,9 @@
     <Compile Include="Assets\MainProject\BasicScene\Scripts\StaticScripts\RandomColor.cs" />
     <Compile Include="Assets\MainProject\BasicScene\Scripts\StaticScripts\RandPosition.cs" />
     <Compile Include="Assets\MainProject\MainMenu\Scripts\Controller.cs" />
+    <Compile Include="Assets\MainProject\StoneAge\Script\Damageble.cs" />
+    <Compile Include="Assets\MainProject\StoneAge\Script\StoneAgeController.cs" />
+    <Compile Include="Assets\MainProject\StoneAge\Script\Translation.cs" />
     <Compile Include="Assets\MainProject\TriangleGameplay\Scripts\DragNDrop.cs" />
     <Compile Include="Assets\MainProject\TriangleGameplay\Scripts\GridCheck.cs" />
     <Compile Include="Assets\MainProject\TriangleGameplay\Scripts\GridElement.cs" />
